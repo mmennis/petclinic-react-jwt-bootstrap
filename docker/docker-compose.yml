@@ -1,0 +1,44 @@
+version: "3"
+
+services:
+  backend:
+    container_name: petclinic-django-backend
+    image: mmennis/petclinic-django
+  dev: 
+    container_name: bootstrap-dev
+    build: 
+      context: ../
+      dockerfile: docker/Dockerfile
+    env_file: 
+      - ../.env.development
+    environment: 
+      - NODE_ENV=development
+    depends_on: 
+      - backend
+  test:
+    container_name: bootstrap-test
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    env_file: 
+      - ../.env.test
+    environment: 
+      - CI=true
+      - NODE_ENV=test
+    command: yarn test
+  prod:
+    container_name: bootstrap-prod
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile.production
+    env_file: 
+      - ../.env
+    environment: 
+      - NODE_ENV=production
+    depends_on: 
+      - backend
+    ports: 
+      - '3001:80'
+
+
+
