@@ -4,7 +4,7 @@ before_install:
   - docker -v
   - cp .env.test .env
   - sudo /etc/init.d/postgresql stop
-  - udo service mysql stop
+  - sudo service mysql stop
 
 install:
   - docker-compose -f docker/docker-compose.yml build .env.test
@@ -12,4 +12,3 @@ install:
 script:
   - docker-compose -f docker/docker-compose.yml run --rm test
 
-  
