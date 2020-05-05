@@ -1,5 +1,11 @@
 [![Build Status](https://travis-ci.org/mmennis/petclinic-react-jwt-bootstrap.svg?branch=master)](https://travis-ci.org/mmennis/petclinic-react-jwt-bootstrap)
 
+#To run docker files:
+
+```docker-compose -f docker/docker-compose.yml build test```
+
+```docker-compose -f docker/docker-compose.yml run --rm test```
+
 ## Available Scripts
 
 In the project directory, you can run:
