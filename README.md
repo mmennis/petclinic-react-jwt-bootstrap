@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mmennis/petclinic-react-jwt-bootstrap.svg?branch=master)](https://travis-ci.org/mmennis/petclinic-react-jwt-bootstrap)
+[![Build Status](https://travis-ci.com/mmennis/petclinic-react-jwt-bootstrap.svg?branch=master)](https://travis-ci.com/mmennis/petclinic-react-jwt-bootstrap)
 
 #To run docker files:
 
